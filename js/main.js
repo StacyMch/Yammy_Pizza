@@ -1,4 +1,4 @@
-//при наведении мыши пицца вращается
+//при движении мыши вне пиццы та вращается
 function rotate() {
     document.getElementById('pizza').style.animation = '10s linear 0s normal none infinite running rot';
 }
