@@ -1,11 +1,4 @@
-//хочу, чтобы круглая целая пицца крутилась при наведении мыши, а при клике из нее пропадало по 1 кусочку
-
-//при наведении мыши пицца вращается
-function rotate() {
-    document.getElementById('pizza').style.animation = '10s linear 0s normal none infinite running rot';
-}
-
-//при уходе мыши перестает вращаться
+//при заходе мыши на пиццу перестает вращаться
 function stopRotating() {
     document.getElementById('pizza').style.animation = '10s linear 0s normal none infinite paused rot';
 }
@@ -19,6 +12,10 @@ function choosePiece() {
     document.getElementById('pizzaWithout9').style.display = 'block'; //делаю его видимым
     document.getElementById('cutPiece9').style.left = "-30px"; //отодвигаю отрезанный кусок, при наведении на него мыши курсор становится указателем
     document.getElementById('btnPizza').textContent = "Good choice! Now click the piece"; //Надпись на кнопке меняется на подсказку
+    document.getElementById('btnPizza').setAttribute('disabled', true);// делаю кнопку неактивной
+    document.getElementById('btnPizza').classList.remove('hover');
+    document.getElementById('btnPizza').style.color = 'black';
+    document.getElementById('btnPizza').style.backgroundColor = 'beige';
 }
 
 //при клике на весь слой с отрезанным кусочком он отъедет влево, перевернется вертикально и под ним появится текст
@@ -36,10 +33,5 @@ function disappears() {
     document.getElementById('pizzaWithout9').style.display = 'none';
     document.getElementById('pizza').style.display = 'block';
     document.getElementById('btnPizza').textContent = "Buon appetito!"; //Надпись на кнопке меняется на поздравление
-    let btn = document.getElementById('btnPizza');
-    btn.setAttribute('disabled', true);// делаю кнопку неактивной
-    btn.classList.remove('hover');
-    btn.style.color = 'black';
-    btn.style.backgroundColor = 'rgba(248, 255, 31, 0.932)';
-
+    document.getElementById('btnPizza').style.backgroundColor = 'rgba(248, 255, 31, 0.932)';
 }
