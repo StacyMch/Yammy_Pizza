@@ -1,3 +1,8 @@
+//при наведении мыши пицца вращается
+function rotate() {
+    document.getElementById('pizza').style.animation = '10s linear 0s normal none infinite running rot';
+}
+
 //при заходе мыши на пиццу перестает вращаться
 function stopRotating() {
     document.getElementById('pizza').style.animation = '10s linear 0s normal none infinite paused rot';
