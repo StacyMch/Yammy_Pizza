@@ -10,7 +10,7 @@
 <body>
     <main class="container">
         <div id="frame" class="pizza-frame">
-            <div onmouseover="rotate()" onmouseleave="stopRotating()" class="pizza" id="pizza"></div>
+            <div onmouseout="rotate()" onmouseover="stopRotating()" class="pizza" id="pizza"></div>
             <div id="pizzaWithout9" class="pizza-without-9">
                 <div onclick="giveInfoAboutPiece()" ondblclick="disappears()" id="cutPiece9" class="cut-piece-9" onclick="giveInfoAboutPiece()"></div>
                 <p id="desc" class="description">Salami<br>& Mushrooms<br><br>€20</p>
